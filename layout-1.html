@@ -20,35 +20,35 @@
             height: 100%;
         }
 
-        .left-sidebar {
+        .left-column {
             width: 200px;
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
         }
 
-        .left-sidebar div {
+        .left-column div {
             border: 1px solid #ff0000;
         }
 
-        .content {
+        .center-column {
             flex: 4;
             display: flex;
             flex-direction: column;
         }
 
-        .content div {
+        .center-column div {
             border: 1px solid #00bb00;
         }
 
-        .right-sidebar {
+        .right-column {
             width: 200px;
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
         }
 
-        .right-sidebar div {
+        .right-column div {
             border: 1px solid #0000ff;
         }
 
@@ -64,19 +64,19 @@
             flex: 0;
         }
 
-        .content-header {
+        .center-header {
             flex: 0;
         }
 
-        .content-title {
+        .center-title {
             flex: 0;
         }
 
-        .content-area {
+        .center-content {
             flex: 1;
         }
 
-        .content-footer {
+        .center-footer {
             flex: 0;
         }
 
@@ -95,18 +95,18 @@
 </head>
 <body>
 <div class="layout">
-    <div class="left-sidebar">
+    <div class="left-column">
         <div class="left-header">#left-header</div>
         <div class="left-content">#left-content</div>
         <div class="left-footer">#left-footer</div>
     </div>
-    <div class="content">
-        <div class="content-header">#content-header</div>
-        <div class="content-title">#content-title</div>
-        <div class="content-area">#content-area</div>
-        <div class="content-footer">#content-footer</div>
+    <div class="center-column">
+        <div class="center-header">#center-header</div>
+        <div class="center-title">#center-title</div>
+        <div class="center-content">#center-content</div>
+        <div class="center-footer">#center-footer</div>
     </div>
-    <div class="right-sidebar">
+    <div class="right-column">
         <div class="right-header">#right-header</div>
         <div class="right-content">#right-content</div>
         <div class="right-footer">#right-footer</div>
