@@ -12,6 +12,7 @@
         html, body {
             margin: 0;
             height: 100%;
+            text-align: left;
         }
 
         #layout {
@@ -20,96 +21,97 @@
             height: 100%;
         }
 
-        #left-column {
-            width: 200px;
-            flex-shrink: 0;
+        #navigation {
+            flex: 0 0 200px;
+            display: flex; /*none*/
+            flex-direction: column;
+            border: 1px solid silver;
+        }
+
+        #main {
+            flex: 1 1;
             display: flex;
             flex-direction: column;
+            border: 1px solid silver;
         }
 
-        #left-column div {
-            border: 1px solid #ff0000;
+        #navigation-header {
+            flex: 0 0 48px;
+            border: 1px solid silver;
         }
 
-        #center-column {
-            flex: 4;
+        #navigation-content {
+            flex: 1 1;
+            border: 1px solid silver;
+        }
+
+        #navigation-footer {
+            flex: 0 0 20px;
+            border: 1px solid silver;
+        }
+
+        #header {
+            flex: 0 0 48px;
+            border: 1px solid silver;
+        }
+
+        #section {
+            flex: 0 0;
+            border: 1px solid silver;
+        }
+
+        #area {
+            flex: 1 1;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid silver;
+        }
+
+        #space {
+            flex: 1 1;
             display: flex;
             flex-direction: column;
+            border-right: 1px solid silver;
         }
 
-        #center-column div {
-            border: 1px solid #00bb00;
+        #sidebar {
+            display: block; /*none*/
+            flex: 0 0 200px;
+            background-color: antiquewhite;
+            border-left: 1px solid silver;
         }
 
-        #right-column {
-            width: 200px;
-            flex-shrink: 0;
-            display: flex;
-            flex-direction: column;
+        #content {
+            flex: 1 1;
+            background: beige;
+            border-bottom: 1px solid silver;
         }
 
-        #right-column div {
-            border: 1px solid #0000ff;
-        }
-
-        #left-header {
-            flex: 0;
-        }
-
-        #left-content {
-            flex: 1;
-        }
-
-        #left-footer {
-            flex: 0;
-        }
-
-        #center-header {
-            flex: 0;
-        }
-
-        #center-title {
-            flex: 0;
-        }
-
-        #center-content {
-            flex: 1;
-        }
-
-        #center-footer {
-            flex: 0;
-        }
-
-        #right-header {
-            flex: 0;
-        }
-
-        #right-content {
-            flex: 1;
-        }
-
-        #right-footer {
-            flex: 0;
+        #footer {
+            flex: 0 0 20px;
+            border-top: 1px solid silver;
         }
     </style>
 </head>
 <body>
 <div id="layout">
-    <div id="left-column">
-        <div id="left-header">#left-header</div>
-        <div id="left-content">#left-content</div>
-        <div id="left-footer">#left-footer</div>
+    <div id="navigation">
+        <div id="navigation-header">#navigation-header</div>
+        <div id="navigation-content">#navigation-content</div>
+        <div id="navigation-footer">#navigation-footer</div>
     </div>
-    <div id="center-column">
-        <div id="center-header">#center-header</div>
-        <div id="center-title">#center-title</div>
-        <div id="center-content">#center-content</div>
-        <div id="center-footer">#center-footer</div>
-    </div>
-    <div id="right-column">
-        <div id="right-header">#right-header</div>
-        <div id="right-content">#right-content</div>
-        <div id="right-footer">#right-footer</div>
+    <div id="main">
+        <div id="header">#header</div>
+        <div id="section">#title</div>
+        <div id="area">
+            <div id="space">
+                <div id="content">#content</div>
+                <div id="footer">#footer</div>
+            </div>
+            <div id="sidebar">
+                #sidebar
+            </div>
+        </div>
     </div>
 </div>
 </body>
